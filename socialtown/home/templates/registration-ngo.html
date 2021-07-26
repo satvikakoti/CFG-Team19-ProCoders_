@@ -1,0 +1,132 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static './css/regV.css' %}">
+    <title>NGO Registration</title>
+</head>
+    <body>
+        <div class="signup-form">
+            <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                <h2>Register as NGO</h2>
+                <hr>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <span class="fa fa-user"></span>
+                            </span>                    
+                        </div>
+                        <input type="text" class="form-control" name="name" placeholder="Name" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>                    
+                        </div>
+                        <input type="text" class="form-control" name="email" placeholder="Email address" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-globe"></i>
+                            </span>                    
+                        </div>
+                        <input type="url" class="form-control" name="website" placeholder="Website URL">
+                    </div>
+                </div>
+                <div class="form-group">
+              <label>Enter a password:</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fa fa-lock"></i>
+                  </span>                    
+                </div>
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+              </div>
+                </div> 
+		<div class="form-group">
+      <label>Confirm password</label>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fa fa-lock"></i>
+						<i class="fa fa-check"></i>
+					</span>                    
+				</div>
+				<input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+			</div>
+        </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-phone"></i>
+                            </span>                    
+                        </div>
+                        <input type="tel" class="form-control" name="contact" placeholder="Contact Number" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-calendar-plus-o"></i>
+                            </span>                    
+                        </div>
+                        <input type="text" class="form-control" name="year" placeholder="Foundation Year" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Are you an NGO or a  Corporate? :</label>
+                  <input type="radio"  style = "margin-left: 30px; " name ="role"  value="ngo" checked> NGO
+                  <span  class ="checkmark"></span>
+                  <input type="radio" style = "margin-left: 30px" name= "role"  value="corporate"> Corporate
+                  <span class ="checkmark"></span>
+              </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <textarea name="about" id="about" cols="40" rows="3" placeholder="About the NGO" required></textarea>
+                    </div>
+                </div>
+               <div class="form-group py-4">
+              <div class="dropdown">
+                <label>Select your interests:</label>
+                <select name="Interests" class="btn btn-success dropdown-toggle"
+                  style="background-color: lightgrey;" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+    
+                  <option value="animal welfare">Animal welfare</option>
+                  <option value="high school">Education</option>
+                  <option value="Food drives">Food drives</option>
+                  <option value="xyz">xyz</option>
+                  <option value="other">other</option>
+                </select>
+    
+              </div>
+            </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg" onClick='registerngo()'>Register</button>
+                </div>
+            </form>
+            <div class="text-center">
+                Already have an account? <a href="/">Login here</a>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,223 @@
+{% load static %}}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Feed-NGO</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static './css/corporate-profile.css'%}">
+    <style>
+        body {
+    background: #eee
+}
+
+.share-input:focus {
+    outline: 0 !important;
+    box-shadow: none
+}
+
+.share-input {
+    outline: 0 !important;
+    box-shadow: none
+}
+
+.publish {
+    border-radius: 0px !important;
+    background: blue;
+    color: #fff;
+    cursor: pointer
+}
+
+.publish:hover {
+    border-radius: 0px !important;
+    background: rgb(22, 22, 232);
+    color: #fff;
+    cursor: pointer
+}
+
+.share i {
+    color: rgb(159, 159, 242) !important
+}
+
+.share {
+    cursor: pointer
+}
+
+.ads-text {
+    font-size: 10px
+}
+
+.ads-content span {
+    font-size: 12px
+}
+
+.time {
+    font-size: 12px;
+    color: blue
+}
+
+.profile-content span {
+    font-size: 12px
+}
+
+.content-image img {
+    width: 100%;
+    height: auto
+}
+
+.ads-content img {
+    width: 100%
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-custom bg-primary" style="padding: 10px;">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">The social town</a>
+          </div>
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              
+                <li><a href="corporate-profile.html">My Profile</a></li>
+              <li><a href="corporate-feed.html">My Feed</a></li>
+                <li><button class="btn btn-warning" style="margin-top: 8px;">logout</button></li>
+              </ul>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </form>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+    <div class="container bootstrap snippets bootdey">
+    <div class="row">
+      <div class="profile-nav col-md-3">
+          <div class="panel">
+              <div class="user-heading round">
+                  <a href="#">
+                      <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                  </a>
+                  <h1>Camila Smith</h1>
+                  <p>deydey@theEmail.com</p>
+              </div>
+    
+              <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
+                  
+                  <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="profile-info col-md-9">
+          
+          
+          </div>
+          <div class="container mt-5 mb-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-8">
+                    <div class="feed">
+                        <div class="panel">
+                            <form>
+                                <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
+                            </form>
+                            <footer class="panel-footer">
+                                <button class="btn btn-warning pull-right">Post</button>
+                                <ul class="nav nav-pills">
+                                    <li>
+                                        <a href="#"><i class="fa fa-map-marker"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-camera"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class=" fa fa-film"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-microphone"></i></a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </div>
+                        <h3 style="color: grey;">Notifications</h3>
+                        <div class="panel">
+                            
+                            <div class="feed-post mt-2 border">
+                                <div class="p-2 bg-white">
+                                    <div class="d-flex flex-row justify-content-between align-items-start profile">
+                                        <div><img class="rounded-circle img-responsive img-thumbnail" src="{% static './images/download.png'%}" width="100" height="50" style="border-radius: 50%; margin-top:10px; margin-left: 10px;" >
+                                            <span style="font-size:22px; font-weight: 600; margin-left: 10px; color: gray;">Learn Your way into designing</span>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="profile-content" style="padding: 10px 10px;"><span style="margin: bottom 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span>
+                                        <div class="content-image"><img src="{% static './images/bg-5.jpg'%}"></div>
+                                    </div>
+                                    <div class="profile-engagements"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel">
+                            <div class="feed-post mt-2 border">
+                                <div class="p-2 bg-white">
+                                    <div class="d-flex flex-row justify-content-between align-items-start profile">
+                                        <div><img class="rounded-circle img-responsive img-thumbnail" src="{% static './images/download.png'%}" width="100" height="50" style="border-radius: 50%; margin-top:10px; margin-left: 10px;" >
+                                            <span style="font-size:22px; font-weight: 600; margin-left: 10px; color: gray;">From The Social Town Admin</span>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="profile-content" style="padding: 10px 10px;"><span style="margin: bottom 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span>
+                                        <div class="content-image"><img src="{% static './images/bg-4.jpg'%}"></div>
+                                    </div>
+                                    <div class="profile-engagements"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel">
+                            <div class="feed-post mt-2 border">
+                                <div class="p-2 bg-white">
+                                    <div class="d-flex flex-row justify-content-between align-items-start profile">
+                                        <div><img class="rounded-circle img-responsive img-thumbnail" src="{% static './images/download.png'%}" width="100" height="50" style="border-radius: 50%; margin-top:10px; margin-left: 10px;" >
+                                            <span style="font-size:22px; font-weight: 600; margin-left: 10px; color: gray;">Time to volunteer!</span>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="profile-content" style="padding: 10px 10px;"><span style="margin: bottom 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span>
+                                        <div class="content-image"><img src="{% static '/images/pexels-photo-6646852.jpeg'%}"></div>
+                                    </div>
+                                    <div class="profile-engagements"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+</body>
+</html>
